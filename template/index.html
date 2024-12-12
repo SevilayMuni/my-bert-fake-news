@@ -17,8 +17,8 @@
         }
 
         .container {
-            margin: auto;
-            width: 70%;
+            margin: 30px 0;
+            width: 60%;
             background: white;
             padding: 30px;
             border-radius: 15px;
@@ -43,7 +43,7 @@
             width: 88%;
             height: 150px;
             padding: 15px;
-            margin: 20px 0;
+            margin: 30px 0;
             border: 2px solid #2196f3;
             border-radius: 10px;
             font-size: 18px;
@@ -70,14 +70,9 @@
         /* Output Styling */
         .result {
             margin-top: 25px;
-            font-size: 20px;
+            font-size: 25px;
             font-weight: bold;
             color: #0d47a1;
-        }
-
-        .confidence {
-            font-size: 18px;
-            color: #a7310a;
         }
 
         /* Footer Styling */
@@ -138,12 +133,11 @@
             <button type="submit">Predict</button>
         </form>
         {% if prediction_text %}
-            <div class="result">Prediction: {{ prediction_text | safe }}</div>
-            <div class="confidence">Confidence: {{ confidence_text | safe }}%</div>
+            <div class="result"> {{ prediction_text | safe }}</div>
         {% endif %}
     </div>
     <footer>
-        <p style="font-size: 15px !important; margin-bottom: 2px;">© 2024 Fake News Detection Project by Sevilay Münire Girgin. All rights reserved.</p>
+        <p style="font-size: 16px !important; margin-bottom: 2px;">© 2024 Fake News Detection Project by Sevilay Münire Girgin. All rights reserved.</p>
         <div class="footer-icons" style="margin-top: 0;">
             <a href="https://github.com/SevilayMuni" target="_blank">
                 <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" title="GitHub">
