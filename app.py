@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request
 from transformers import pipeline
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
-import os
 
 # Directory where your fine-tuned model and tokenizer are saved
 model_name = "SevilayG/my-bert-fake-news"
@@ -47,5 +46,4 @@ def predict():
         return render_template("index.html", prediction_text=f"An error occurred: {str(e)}")
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port, debug=True)
+    app.run(debug=True)
