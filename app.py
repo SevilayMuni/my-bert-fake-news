@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import numpy as np
+import numpy
 from transformers import pipeline
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
