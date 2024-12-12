@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import numpy as np
 from transformers import pipeline
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
@@ -23,4 +24,4 @@ def predict():
     return render_template("index.html", prediction_text = "The news is {}".format(prediction))
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
