@@ -7,8 +7,8 @@ model_name = "SevilayG/my-bert-fake-news"
 
 # Label dictionary
 label_mapping = {
-    "LABEL_0": "True News",
-    "LABEL_1": "Fake News"
+    "LABEL_0": "Fake News",
+    "LABEL_1": "True News"
 }
 
 def load_pipeline():
